@@ -7,7 +7,9 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
-
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 
 class chapter : AppCompatActivity() {
@@ -25,6 +27,8 @@ class chapter : AppCompatActivity() {
 
         val imageContainer = findViewById<LinearLayout>(R.id.image_container)
         val namaKomik = intent.getStringExtra("namaKomik") ?: return
+
+        saveHistory(namaKomik)
         loadImages(imageContainer, namaKomik)
     }
 
@@ -51,5 +55,24 @@ class chapter : AppCompatActivity() {
             container.addView(imageView)
         }
     }
+
+    private fun saveHistory(namaKomik: String) {
+        val prefs = getSharedPreferences("komik_history", MODE_PRIVATE)
+        val editor = prefs.edit()
+
+        val history = prefs.getStringSet("history_set", mutableSetOf())?.toMutableSet() ?: mutableSetOf()
+
+        // Format waktu sekarang
+        val sdf = SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault())
+        val currentTime = sdf.format(Date())
+
+        // Tambahkan entry ke history
+        history.add("$namaKomik - $currentTime")
+
+        editor.putStringSet("history_set", history)
+        editor.apply()
+    }
+
+
 
 }

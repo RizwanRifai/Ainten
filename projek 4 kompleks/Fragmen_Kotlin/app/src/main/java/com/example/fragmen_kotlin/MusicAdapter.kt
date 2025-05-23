@@ -2,6 +2,7 @@ package com.example.fragmen_kotlin.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Context.MODE_PRIVATE
 import android.media.MediaPlayer
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -9,6 +10,9 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fragmen_kotlin.databinding.ItemMusicBinding
 import com.example.fragmen_kotlin.model.Music
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class MusicAdapter(private val context: Context, private val list: List<Music>) :
     RecyclerView.Adapter<MusicAdapter.MusicViewHolder>() {
@@ -34,6 +38,7 @@ class MusicAdapter(private val context: Context, private val list: List<Music>) 
             if (!url.isNullOrEmpty()) {
                 if (currentPlaying == position && mediaPlayer?.isPlaying == true) {
                     mediaPlayer?.pause()
+
                     holder.binding.btnPlay.setImageResource(android.R.drawable.ic_media_play) // ganti ke ikon play
                 } else {
                     mediaPlayer?.release()
@@ -49,8 +54,12 @@ class MusicAdapter(private val context: Context, private val list: List<Music>) 
                 Toast.makeText(context, "Link lagu tidak tersedia", Toast.LENGTH_SHORT).show()
             }
         }
+        
+
+
 
     }
 
     override fun getItemCount() = list.size
 }
+

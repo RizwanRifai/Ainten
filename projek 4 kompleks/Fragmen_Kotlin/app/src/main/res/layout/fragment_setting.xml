@@ -6,13 +6,22 @@
     android:background="@color/laven"
     tools:context=".Setting">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/setting_teks"
-        android:textSize="24dp"
-        android:layout_gravity="center"
-        />
+        android:background="@color/laven">
+
+        <TextView
+            android:id="@+id/history_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Riwayat Komik"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:padding="20dp"
+            android:background="@color/laven"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
 
 </FrameLayout>
