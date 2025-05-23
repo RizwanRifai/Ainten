@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "757553512766",
+    "project_id": "login-b1cab",
+    "storage_bucket": "login-b1cab.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757553512766:android:04c70f811ee21f3918ac6f",
+        "android_client_info": {
+          "package_name": "com.example.fragmen_kotlin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDY6uAMQ44ILHsWwf2-06afadTYkM9gjxg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

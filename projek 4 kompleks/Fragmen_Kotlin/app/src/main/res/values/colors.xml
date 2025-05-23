@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primar">#2C2F33</color>
+    <color name="blues">#c8e2ff</color>
+    <color name="laven">#8692F7</color>
+
+    <color name="primary">#FAF1E6</color>
+    <color name="primary_dark">#388E3C</color>
+    <color name="accent">#FF9800</color>
+    <color name="accent_dark">#F57C00</color>
+    <color name="background_light">#FAFAFA</color>
+    <color name="text_color_light_theme">#212121</color>
+
+    <!-- Dark theme colors -->
+    <color name="primary_dark_theme">#2E7D32</color>
+    <color name="primary_dark_dark_theme">#1B5E20</color>
+    <color name="accent_dark_theme">#FF9800</color>
+    <color name="accent_dark_dark_theme">#F57C00</color>
+    <color name="background_dark">#121212</color>
+    <color name="text_color_dark_theme">#FFFFFF</color>
+</resources>

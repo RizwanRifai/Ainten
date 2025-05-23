@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name"></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="home_teks">Home</string>
+
+    <string name="profile_teks">Profile</string>
+
+    <string name="setting_teks">Setting</string>
+</resources>
